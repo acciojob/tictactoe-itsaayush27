@@ -1,51 +1,82 @@
+/* General styling */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f4f4f4;
-  margin: 0;
-}
-
-.container {
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
+  background: #fff;
+  margin: 0;
+  padding: 20px;
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+/* Message display */
+.message {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* Board layout */
 .board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
-  gap: 5px;
-  margin: 20px auto;
+  gap: 2px;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid black;
 }
 
+/* Cell styling */
 .cell {
-  width: 100px;
-  height: 100px;
-  background: white;
-  border: 2px solid #333;
+  background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.5em;
+  font-weight: bold;
   cursor: pointer;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
 }
 
 .cell.taken {
-  pointer-events: none;
+  cursor: not-allowed;
 }
 
-.winner {
-  background: #90ee90;
+/* Highlight winning cells */
+.cell.winner {
+  background-color: purple !important;
+  color: white;
 }
 
-.message {
-  margin-top: 10px;
-  font-size: 18px;
+/* Player input form */
+#player-form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 6px;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 1em;
   font-weight: bold;
+  background: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #222;
 }
