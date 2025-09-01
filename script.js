@@ -1,12 +1,12 @@
 //your JS code here. If required.
-const submitBtn = document.getElementById("Start Game");
+const submitBtn = document.getElementById("submit");
 const gameDiv = document.getElementById("game");
 const formDiv = document.getElementById("player-form");
 const messageDiv = document.querySelector(".message");
 const cells = document.querySelectorAll(".cell");
 
-let player-1 = "";
-let player-2 = "";
+let player1 = "";
+let player2 = "";
 let currentPlayer = "";
 let currentSymbol = "X";
 let gameActive = true;
@@ -23,8 +23,8 @@ const winPatterns = [
 ];
 
 submitBtn.addEventListener("click", () => {
-  player1 = document.getElementById("player-1").value || "Player 1";
-  player2 = document.getElementById("player-2").value || "Player 2";
+  player1 = document.getElementById("player1").value || "Player 1";
+  player2 = document.getElementById("player2").value || "Player 2";
   currentPlayer = player1;
 
   formDiv.style.display = "none";
