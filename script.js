@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const submitBtn = document.getElementById("submit");
 const gameDiv = document.getElementById("game");
 const formDiv = document.getElementById("player-form");
@@ -8,7 +7,7 @@ const cells = document.querySelectorAll(".cell");
 let player1 = "";
 let player2 = "";
 let currentPlayer = "";
-let currentSymbol = "X";
+let currentSymbol = "x"; // lowercase for Cypress
 let gameActive = true;
 
 const winPatterns = [
@@ -40,7 +39,7 @@ cells.forEach((cell) => {
     cell.classList.add("taken");
 
     if (checkWinner()) {
-      messageDiv.textContent = `${currentPlayer}, congratulations you won!`;
+      messageDiv.textContent = `${currentPlayer} congratulations you won!`; // matches Cypress
       gameActive = false;
       return;
     }
@@ -48,10 +47,10 @@ cells.forEach((cell) => {
     // Switch player
     if (currentPlayer === player1) {
       currentPlayer = player2;
-      currentSymbol = "O";
+      currentSymbol = "o";
     } else {
       currentPlayer = player1;
-      currentSymbol = "X";
+      currentSymbol = "x";
     }
 
     messageDiv.textContent = `${currentPlayer}, you're up`;
